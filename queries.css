@@ -1,4 +1,4 @@
-@media (max-width: 34em) {
+/*@media (max-width: 34em) {
   header {
     display: grid;
     grid-template-columns: 1fr;
@@ -44,3 +44,4 @@
     grid-template-columns: 1fr;
   }
 } ;
+*/
