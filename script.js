@@ -2,7 +2,7 @@
 var randomnumber = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
 console.log(randomnumber);
 var score = Number(document.querySelector('.score').textContent);
-
+var highscore = 0;
 document.querySelector('.check').addEventListener('click', function () {
   const value_from_box = document.querySelector('.guess').value;
   //When ther is no input
@@ -32,6 +32,10 @@ document.querySelector('.check').addEventListener('click', function () {
 
     //When player wins
   } else if (value_from_box == randomnumber) {
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
     document.querySelector('.message').textContent = '🎉🥳 Correct Number!';
     document.querySelector('.number').textContent = randomnumber;
     document.querySelector('body').style.backgroundColor = '#60b347';
